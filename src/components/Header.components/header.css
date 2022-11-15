@@ -1,0 +1,36 @@
+.header_container {
+  z-index: 100;
+}
+
+.nav-overlay {
+  position: absolute;
+  top: -100%;
+  z-index: 999;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: #1d1d1b;
+}
+
+.top_bar,
+.bottom_bar {
+  height: 1.5px;
+  border-radius: 50px;
+}
+
+.ham_bars {
+  padding: 10px 5px;
+  transition: 0.5s all ease;
+}
+
+.ham_bars:hover .top_bar {
+  transform: translateX(5px);
+  transition: 0.5s all ease;
+}
+
+.ham_bars:hover .bottom_bar {
+  transform: translateX(-5px);
+  transition: 0.5s all ease;
+}
+
+.socials_text {
+  color: #c3bcb2;
+}
