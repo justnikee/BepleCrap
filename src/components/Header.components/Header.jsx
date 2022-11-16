@@ -59,7 +59,7 @@ const Header = () => {
             >
               01
             </span>
-            <p className="socials_text text-8xl uppercase text-center text-grey-500 hover:line-through">
+            <p className="socials_text text-9xl transition-all duration-1000 ease-in-out uppercase text-center text-grey-500 hover:line-through">
               home
             </p>
           </Link>
@@ -72,7 +72,7 @@ const Header = () => {
             >
               02
             </span>
-            <p className="socials_text text-8xl uppercase text-grey-500 ease-in duration-2000 hover:line-through">
+            <p className="socials_text text-9xl uppercase text-grey-500 ease-in duration-2000 hover:line-through">
               Work
             </p>
           </Link>
@@ -85,7 +85,7 @@ const Header = () => {
             >
               03
             </span>
-            <p className="socials_text text-8xl uppercase text-grey-400 hover:line-through">
+            <p className="socials_text text-9xl uppercase text-grey-400 hover:line-through">
               Contact
             </p>
           </Link>

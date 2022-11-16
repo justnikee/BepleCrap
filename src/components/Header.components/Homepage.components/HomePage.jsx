@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "./Hero";
+import WorkSection from "./work.section";
 
 import styled from "styled-components";
 
@@ -10,6 +11,7 @@ const HomePage = () => {
   return (
     <Home>
       <Hero />
+      <WorkSection />
     </Home>
   );
 };
