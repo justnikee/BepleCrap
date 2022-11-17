@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import WorkSection from "./work.section";
 
 import styled from "styled-components";
+import BigImageText from "./BigImageText";
 
 const Home = styled.div`
   padding: 30px;
@@ -12,6 +13,7 @@ const HomePage = () => {
     <Home>
       <Hero />
       <WorkSection />
+      <BigImageText />
     </Home>
   );
 };

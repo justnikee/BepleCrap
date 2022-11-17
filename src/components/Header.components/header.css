@@ -34,3 +34,12 @@
 .socials_text {
   color: #c3bcb2;
 }
+
+figure#\31:after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background: #000;
+  position: absolute;
+  right: -40px;
+}
