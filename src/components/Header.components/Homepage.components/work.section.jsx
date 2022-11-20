@@ -31,7 +31,6 @@ const ImageTextContainer = styled.div`
   justify-content: center;
   gap: 80px;
   align-items: center;
-  margin: 100px 0;
 `;
 const Image = styled.img`
   height: 200px;

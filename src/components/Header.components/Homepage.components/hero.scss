@@ -1,0 +1,31 @@
+.banner_container {
+  height: fit-content;
+  width: 100%;
+  background-color: #232323;
+  overflow: hidden;
+  padding: 10px;
+  margin-top: 100px;
+}
+
+.banner_heading {
+  font-size: 530px;
+  color: #cdc6be;
+  line-height: 500px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.website_container {
+  height: fit-content;
+  width: 70%;
+  background-color: #232323;
+  padding: 10px;
+}
+
+.website_heading {
+  font-size: 200px;
+  text-transform: uppercase;
+  line-height: normal;
+  color: #cdc6be;
+  text-align: center;
+}

@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <div
-      className="header_container"
+      className="header_container overflow-hidden fixed w-full top-0"
       style={{
         background: "#c3bcb2",
         borderBottom: "1px solid #000",
@@ -43,9 +43,9 @@ const Header = () => {
       </div>
 
       <div
-        className="nav-overlay h-screen flex justify-center items-center flex-col w-screen gap-5"
+        className="nav-overlay h-screen flex justify-center items-center flex-col w-screen gap-5 fixed"
         style={{
-          top: isopen ? "0%" : "-100%",
+          top: isopen ? "0%" : "-120%",
           transitionDelay: isopen ? "0s" : "0s",
         }}
       >
@@ -100,6 +100,13 @@ const Header = () => {
           <a href="www.linkedin.com">
             <span className="socials_text">Linkedin</span>
           </a>
+        </div>
+        <div
+          className="absolute top-8 right-10 transition duration-1000 ease-in-out  hover:rotate-180 cursor-pointer h-100"
+          onClick={() => setIsOpen(false)}
+        >
+          <div className="h-px w-8 bg-slate-300 rotate-45 hover:scale-110"></div>
+          <div className="h-px w-8 bg-slate-300 -rotate-45 hover:scale-125"></div>
         </div>
       </div>
     </div>

@@ -17,6 +17,7 @@
   display: flex;
   gap: 100px;
   justify-content: center;
+  position: relative;
   /* align-items: center; */
 }
 
@@ -50,4 +51,14 @@
   object-fit: cover;
   border: 1px solid #000;
   display: block;
+}
+
+.left_side:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 33%;
+  bottom: 0;
+  background: #000;
 }

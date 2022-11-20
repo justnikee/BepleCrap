@@ -1,26 +1,9 @@
 import React from "react";
-
-const Hero = () => {
+import "./hero.scss";
+const Hero = ({ heading, container_class, heading_class }) => {
   return (
-    <div
-      style={{
-        height: "fit-content",
-        width: "100%",
-        background: "#232323",
-        overflow: "hidden",
-        padding: "10px",
-      }}
-    >
-      <h1
-        style={{
-          fontSize: "530px",
-          color: "#cdc6be",
-          lineHeight: "500px",
-          textAlign: "center",
-        }}
-      >
-        Nikhil
-      </h1>
+    <div className={container_class}>
+      <h1 className={heading_class}>{heading}</h1>
     </div>
   );
 };
