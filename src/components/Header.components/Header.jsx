@@ -25,9 +25,9 @@ const Header = () => {
           alignItems: "center",
         }}
       >
-        <div className="uppercase">mohali, Punjab India</div>
-        <div className="logo text-3xl">
-          <Link className="uppercase" to="/">
+        <div className="uppercase font-bold">Chandigarh, India</div>
+        <div className="logo text-4xl">
+          <Link className="uppercase font-extrabold text-[#00483C]" to="/">
             Nikeeyyy
           </Link>
         </div>
