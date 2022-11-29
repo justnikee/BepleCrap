@@ -17,22 +17,22 @@ const HomePage = () => {
   const { scrollYProgress } = useScroll();
   return (
     <>
-      <motion.div
+      {/* <motion.div
         className="progressBar"
         style={{
           scaleX: scrollYProgress,
         }}
-      >
-        {/* <NewHero /> */}
-        <Hero
-          heading_class="banner_heading"
-          container_class="banner_container"
-          heading="nikhil"
-        />
-        <WorkSection />
-        <BigImageText />
-        <WebsiteName />
-      </motion.div>
+      > */}
+      <NewHero />
+      <Hero
+        heading_class="banner_heading"
+        container_class="banner_container"
+        heading="nikhil"
+      />
+      <WorkSection />
+      <BigImageText />
+      <WebsiteName />
+      {/* </motion.div> */}
     </>
   );
 };
