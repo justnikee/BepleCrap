@@ -4,8 +4,9 @@ import WorkSection from "./work.section";
 import WebsiteName from "./websiteName";
 import styled from "styled-components";
 import BigImageText from "./BigImageText";
-import NewHero from "./New Hero/NewHero";
-import { motion, useScroll } from "framer-motion";
+import Banner from "./Banner";
+import HeroSection from "./NewSections/HeroSection";
+
 import "../../.././App.css";
 
 const Home = styled.div`
@@ -14,16 +15,9 @@ const Home = styled.div`
   gap: 50px;
 `;
 const HomePage = () => {
-  const { scrollYProgress } = useScroll();
   return (
     <>
-      {/* <motion.div
-        className="progressBar"
-        style={{
-          scaleX: scrollYProgress,
-        }}
-      > */}
-      <NewHero />
+      <HeroSection />
       <Hero
         heading_class="banner_heading"
         container_class="banner_container"
@@ -32,7 +26,7 @@ const HomePage = () => {
       <WorkSection />
       <BigImageText />
       <WebsiteName />
-      {/* </motion.div> */}
+      <Banner />
     </>
   );
 };

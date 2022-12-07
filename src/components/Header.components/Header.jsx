@@ -9,8 +9,8 @@ const Header = () => {
     <div
       className="header_container overflow-hidden fixed w-full top-0"
       style={{
-        background: "#c3bcb2",
-        borderBottom: "1px solid #000",
+        background: "#ffffff",
+        border: "2px solid #000",
         display: "flex",
         justifyContent: "center",
         height: "70px",
