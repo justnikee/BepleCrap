@@ -25,9 +25,12 @@ const Header = () => {
           alignItems: "center",
         }}
       >
-        <div className="uppercase font-bold">Chandigarh, India</div>
-        <div className="logo text-4xl">
-          <Link className="uppercase font-extrabold text-[#00483C]" to="/">
+        <div className="uppercase font-bold w-1/3">Chandigarh, India</div>
+        <div className="text-4xl w-1/3 flex justify-center">
+          <Link
+            className="uppercase font-extrabold text-[#00483C] font[MuseoModerno] "
+            to="/"
+          >
             Nikeeyyy
           </Link>
         </div>
@@ -35,7 +38,7 @@ const Header = () => {
           onClick={() => {
             return setIsOpen(!isopen);
           }}
-          className="flex flex-col gap-1.5 cursor-pointer ham_bars"
+          className="flex flex-col gap-1.5 cursor-pointer ham_bars w-1/3 items-end"
         >
           <div className="w-8 bg-black top_bar"></div>
           <div className="w-8 bg-black bottom_bar"></div>
