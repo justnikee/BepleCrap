@@ -1,0 +1,22 @@
+.anime {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(200px);
+}
+
+.sub_text {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(200px);
+}
+
+.anim_text {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(200px);
+}
+
+.button {
+  transform: translateY(100px);
+  opacity: 0;
+}
