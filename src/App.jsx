@@ -32,7 +32,7 @@ function App() {
 
   return (
     <Router>
-      <div className="app">
+      <div className="app py-[70px]">
         <Header />
         <Routes>
           <Route exact path="/" element={<HomePage />} />

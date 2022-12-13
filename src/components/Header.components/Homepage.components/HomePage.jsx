@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import HeroSection from "./NewSections/HeroSection";
+import TechStack from "./NewSections/TechStack";
 
 import "../../.././App.css";
 
@@ -14,6 +15,7 @@ const HomePage = () => {
   return (
     <>
       <HeroSection />
+      <TechStack />
     </>
   );
 };

@@ -68,9 +68,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="h-screen w-screen bg-slate-600 flex justify-center items-center">
+      {/* <div className="h-screen w-screen bg-slate-600 flex justify-center items-center">
         <h1>section 2</h1>
-      </div>
+      </div> */}
     </>
   );
 };
