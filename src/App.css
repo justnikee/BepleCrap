@@ -8,6 +8,7 @@
 
 body {
   background-color: #fce3a4;
+  overscroll-behavior: none;
 }
 
 .canopee {

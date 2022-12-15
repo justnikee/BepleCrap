@@ -17,6 +17,7 @@ const TechStack = () => {
         scrollTrigger: {
           trigger: el,
           start: "top center",
+          triggerAction: "restart none none none",
         },
       }
     );
