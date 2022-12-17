@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import ProfilePicture from "../../../../assets/pp.svg";
+import pp from "../../../.././assets/PortfolioWorkimages/main.gif";
 import styled from "styled-components";
 import gsap from "gsap";
 
-const HeroSection = () => {
+import { motion } from "framer-motion";
+
+const HeroSection = ({ transition }) => {
   useEffect(() => {
     const tl = gsap.timeline({
       defaults: { ease: "Power4.inOut", duration: 2 },
@@ -64,7 +67,20 @@ const HeroSection = () => {
         </div>
         <div className="flex flex-col relative w-1/2 bg-[#ffffff] border-b-2 border-black justify-center items-center">
           <div className="p-20">
-            <img className="h-full w-96" src={ProfilePicture} alt="" />
+            <motion.img
+              initial={{
+                opacity: 0,
+                y: 200,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.5, ...transition },
+              }}
+              className="h-full w-96"
+              src={pp}
+              alt=""
+            />
           </div>
         </div>
       </div>

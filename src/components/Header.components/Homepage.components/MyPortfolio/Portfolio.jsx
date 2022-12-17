@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+import { motion } from "framer-motion";
 
 const images = [
   "https://images.unsplash.com/photo-1630857453903-0386bfb0d990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
@@ -10,7 +11,7 @@ const images = [
   "https://images.unsplash.com/photo-1633167606207-d840b5070fc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHJlbmRlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
 ];
 
-const Portfolio = () => {
+const Portfolio = ({ transition }) => {
   const portfolio__trigger = useRef(null);
   const heading = useRef(null);
   const imagesRef = useRef(null);
@@ -64,12 +65,18 @@ const Portfolio = () => {
         <section className="w-screen grid grid-cols-4 gap-4">
           {images.map((img, i) => {
             return (
-              <img
-                ref={imagesRef}
-                className="anime_image h-full w-96 object-cover"
-                key={i}
-                src={img}
-              />
+              <div className="overflow-hidden ">
+                <motion.img
+                  whileHover={{
+                    scale: 1.3,
+                    transition: { delay: 0.2, ...transition },
+                  }}
+                  ref={imagesRef}
+                  className="anime_image h-full w-96 object-cover"
+                  key={i}
+                  src={img}
+                ></motion.img>
+              </div>
             );
           })}
         </section>
