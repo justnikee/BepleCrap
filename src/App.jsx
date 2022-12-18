@@ -5,6 +5,7 @@ import HomePage from "./components/Header.components/Homepage.components/HomePag
 import WorkPage from "./components/Header.components/WorkPage.jsx/WorkPage";
 import ContactUs from "./components/Header.components/contactus.component/ContactUs";
 import Lenis from "@studio-freight/lenis";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const lenis = new Lenis({
@@ -34,8 +35,17 @@ function App() {
     <Router>
       <div className="app pt-[70px]">
         <Header />
+
         <Routes>
-          <Route exact path="/" element={<HomePage />} />
+          <Route
+            exact
+            path="/"
+            element={
+              <AnimatePresence exitBeforeEnter>
+                <HomePage />
+              </AnimatePresence>
+            }
+          />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>

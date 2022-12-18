@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 import HeroSection from "./NewSections/HeroSection";
 import TechStack from "./NewSections/TechStack";
 import Portfolio from "./MyPortfolio/Portfolio";
@@ -18,11 +18,19 @@ const Home = styled.div`
 `;
 const HomePage = () => {
   return (
-    <>
+    <motion.div
+      initial={{
+        width: 0,
+      }}
+      animate={{
+        width: "100%",
+        transition: { delay: 0.3, ...transition },
+      }}
+    >
       <HeroSection transition={transition} />
       <TechStack transition={transition} />
       <Portfolio transition={transition} />
-    </>
+    </motion.div>
   );
 };
 

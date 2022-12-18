@@ -25,10 +25,10 @@ const Header = () => {
           alignItems: "center",
         }}
       >
-        <div className="uppercase font-bold w-1/3 font-[syne]">
+        {/* <div className="uppercase font-bold w-1/3 font-[syne]">
           Chandigarh, India
-        </div>
-        <div className="text-3xl w-1/3 flex justify-center">
+        </div> */}
+        <div className="text-3xl w-1/3 flex justify-start">
           <Link
             className="uppercase font-extrabold text-[#00483C] font-[syne] "
             to="/"

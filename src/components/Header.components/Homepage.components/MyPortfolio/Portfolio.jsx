@@ -3,6 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const images = [
   "https://images.unsplash.com/photo-1630857453903-0386bfb0d990?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
@@ -65,7 +66,7 @@ const Portfolio = ({ transition }) => {
           className="text-7xl font-[syne]"
         >
           {" "}
-          My Portfolio{" "}
+          My Work{" "}
         </motion.h1>
         <motion.p
           initial={{
@@ -89,29 +90,31 @@ const Portfolio = ({ transition }) => {
           {images.map((img, i) => {
             return (
               <div className="overflow-hidden ">
-                <motion.img
-                  initial={{
-                    opacity: 0,
-                    y: 100,
-                  }}
-                  whileHover={{
-                    scale: 1.3,
-                    transition: { delay: 0.2, ...transition },
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      delay: 0.5,
-                      when: "beforeChildren",
-                      staggerChildren: 0.2,
-                    },
-                  }}
-                  ref={imagesRef}
-                  className="anime_image h-full w-96 object-cover"
-                  key={i}
-                  src={img}
-                ></motion.img>
+                <Link to="/work">
+                  <motion.img
+                    initial={{
+                      opacity: 0,
+                      y: 100,
+                    }}
+                    whileHover={{
+                      scale: 1.3,
+                      transition: { delay: 0.2, ...transition },
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.5,
+                        when: "beforeChildren",
+                        staggerChildren: 0.2,
+                      },
+                    }}
+                    ref={imagesRef}
+                    className="anime_image h-full w-96 object-cover"
+                    key={i}
+                    src={img}
+                  ></motion.img>
+                </Link>
               </div>
             );
           })}

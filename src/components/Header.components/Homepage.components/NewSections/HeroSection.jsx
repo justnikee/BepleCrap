@@ -3,7 +3,7 @@ import ProfilePicture from "../../../../assets/pp.svg";
 import pp from "../../../.././assets/PortfolioWorkimages/main.gif";
 import styled from "styled-components";
 import gsap from "gsap";
-
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const HeroSection = ({ transition }) => {
@@ -26,21 +26,11 @@ const HeroSection = ({ transition }) => {
       },
       "-=1.5"
     );
-    // .to(
-    //   ".button",
-    //   {
-    //     "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-    //     opacity: 1,
-    //     duration: "1",
-    //     y: 0,
-    //   },
-    //   "-=1.2"
-    // );
   });
 
   return (
     <>
-      <div className="flex h-full border-b-[3px] border-[#08081b]">
+      <div className="flex h-screen border-b-[3px] border-[#08081b]">
         <div className="flex flex-col gap-10  border-[#08081b] bg-[#ffffff] justify-center items-start p-10 w-[60%]">
           <Heading className="anime text-black text-6xl w-full font-[Syne] overflow-hidden">
             <span className="anim_text font-[Syne] inline-block leading-[64px]">
@@ -60,24 +50,26 @@ const HeroSection = ({ transition }) => {
             possimus eius placeat veritatis explicabo ipsam debitis in nulla,
             est soluta!
           </SubHeading>
-          <motion.button
-            initial={{
-              opacity: 0,
-              y: 100,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { delay: 0.3, ...transition },
-            }}
-            whileHover={{
-              boxShadow: "none",
-              ease: "linear",
-            }}
-            className=" bg-[#ffc900] px-16 py-3 border-[3px] border-black rounded-xl border-r-black shadow uppercase font-bold "
-          >
-            contact now
-          </motion.button>
+          <Link to="/contact">
+            <motion.button
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.3, ...transition },
+              }}
+              whileHover={{
+                boxShadow: "none",
+                ease: "linear",
+              }}
+              className=" bg-[#ffc900] px-16 py-3 border-[3px] border-black rounded-xl border-r-black shadow uppercase font-bold "
+            >
+              contact now
+            </motion.button>
+          </Link>
         </div>
         <div className="flex flex-col relative  bg-[#ffffff]  justify-center items-end w-[40%]">
           <div className="p-20">
