@@ -16,56 +16,70 @@ const HeroSection = ({ transition }) => {
       opacity: 1,
       y: 0,
       duration: 2,
-    })
-      .to(
-        ".sub_text",
-        {
-          "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-          opacity: 1,
-          duration: 1.5,
-          y: 0,
-        },
-        "-=1.5"
-      )
-      .to(
-        ".button",
-        {
-          "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-          opacity: 1,
-          duration: "1",
-          y: 0,
-        },
-        "-=1.2"
-      );
+    }).to(
+      ".sub_text",
+      {
+        "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+        opacity: 1,
+        duration: 1,
+        y: 0,
+      },
+      "-=1.5"
+    );
+    // .to(
+    //   ".button",
+    //   {
+    //     "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+    //     opacity: 1,
+    //     duration: "1",
+    //     y: 0,
+    //   },
+    //   "-=1.2"
+    // );
   });
 
   return (
     <>
-      <div className="flex h-screen ">
-        <div className="flex flex-col gap-5 border-r-2 border-b-2 border-black bg-[#ffffff] justify-center items-start p-10 w-1/2">
+      <div className="flex h-full border-b-[3px] border-[#08081b]">
+        <div className="flex flex-col gap-10  border-[#08081b] bg-[#ffffff] justify-center items-start p-10 w-[60%]">
           <Heading className="anime text-black text-6xl w-full font-[Syne] overflow-hidden">
-            <span className="anim_text font-[Syne] inline-block">
-              Hii Im Nikhil
+            <span className="anim_text font-[Syne] inline-block leading-[64px]">
+              Hii Im Nikhil,
             </span>
             <br />
-            <span className="anim_text font-[Syne] inline-block">
-              & I Build
+            <span className="anim_text font-[Syne] inline-block leading-[64px]">
+              And I Build
             </span>
             <br />
-            <span className="anim_text font-[Syne] inline-block">
+            <span className="anim_text font-[Syne] inline-block leading-[64px]">
               Things For Web
             </span>
           </Heading>
-          <SubHeading className="text-xl w-1/2 font-[MuseoModerno] sub_text">
+          <SubHeading className="text-2xl w-full font-[MuseoModerno] sub_text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
             possimus eius placeat veritatis explicabo ipsam debitis in nulla,
             est soluta!
           </SubHeading>
-          <Button className="button bg-[#ffc900] px-16 py-3 border-r-black shadow uppercase font-bold ">
+          <motion.button
+            initial={{
+              opacity: 0,
+              y: 100,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: { delay: 0.3, ...transition },
+            }}
+            whileHover={{
+              boxShadow: "none",
+              ease: "linear",
+            }}
+            className=" bg-[#ffc900] px-16 py-3 border-[3px] border-black rounded-xl border-r-black shadow uppercase font-bold "
+          >
             contact now
-          </Button>
+          </motion.button>
         </div>
-        <div className="flex flex-col relative w-1/2 bg-[#ffffff] border-b-2 border-black justify-center items-center">
+        <div className="flex flex-col relative  bg-[#ffffff]  justify-center items-end w-[40%]">
           <div className="p-20">
             <motion.img
               initial={{
@@ -91,11 +105,11 @@ const HeroSection = ({ transition }) => {
   );
 };
 
-const Button = styled.button`
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  opacity: 0;
-  transform: translateY(100px);
-`;
+// const Button = styled.button`
+//   /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+//   opacity: 0;
+//   transform: translateY(100px); */
+// `;
 
 const SubHeading = styled.p`
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);

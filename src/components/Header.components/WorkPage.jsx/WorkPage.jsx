@@ -28,6 +28,9 @@ const WorkPage = () => {
           y: 0,
           transition: { delay: 0.2, ...transition },
         }}
+        exit={{
+          opacity: 0,
+        }}
         className="text-6xl font-[syne] uppercase"
       >
         WorkPage

@@ -34,7 +34,7 @@ const Portfolio = ({ transition }) => {
         scrollTrigger: {
           trigger: trigEl,
           start: "top center",
-          triggerAction: "restart none none none",
+          // triggerAction: "restart none none none",
         },
       }
     ).to(imgEl, {
@@ -51,25 +51,61 @@ const Portfolio = ({ transition }) => {
         ref={portfolio__trigger}
         className="flex flex-col h-full w-screen gap-8 py-16 px-4 "
       >
-        <h1 ref={heading} className="text-7xl font-[syne]">
+        <motion.h1
+          initial={{
+            opacity: 0,
+            y: 100,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { ...transition },
+          }}
+          ref={heading}
+          className="text-7xl font-[syne]"
+        >
           {" "}
           My Portfolio{" "}
-        </h1>
-        <p className="text-lg w-1/2">
+        </motion.h1>
+        <motion.p
+          initial={{
+            opacity: 0,
+            y: 100,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.3, ...transition },
+          }}
+          className="text-lg w-1/2"
+        >
           A small gallery of recent projects chosen by me. I've done them all
           together with amazing
           <br /> people from companies around the globe. It's only a drop in{" "}
           <br />
           the ocean compared to the entire list.
-        </p>
+        </motion.p>
         <section className="w-screen grid grid-cols-4 gap-4">
           {images.map((img, i) => {
             return (
               <div className="overflow-hidden ">
                 <motion.img
+                  initial={{
+                    opacity: 0,
+                    y: 100,
+                  }}
                   whileHover={{
                     scale: 1.3,
                     transition: { delay: 0.2, ...transition },
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      delay: 0.5,
+                      when: "beforeChildren",
+                      staggerChildren: 0.2,
+                    },
                   }}
                   ref={imagesRef}
                   className="anime_image h-full w-96 object-cover"

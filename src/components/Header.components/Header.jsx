@@ -10,7 +10,7 @@ const Header = () => {
       className="header_container overflow-hidden fixed w-full top-0"
       style={{
         background: "#ffffff",
-        border: "2px solid #000",
+        borderBottom: "3px solid #08081b",
         display: "flex",
         justifyContent: "center",
         height: "70px",
@@ -25,10 +25,12 @@ const Header = () => {
           alignItems: "center",
         }}
       >
-        <div className="uppercase font-bold w-1/3">Chandigarh, India</div>
-        <div className="text-4xl w-1/3 flex justify-center">
+        <div className="uppercase font-bold w-1/3 font-[syne]">
+          Chandigarh, India
+        </div>
+        <div className="text-3xl w-1/3 flex justify-center">
           <Link
-            className="uppercase font-extrabold text-[#00483C] font[MuseoModerno] "
+            className="uppercase font-extrabold text-[#00483C] font-[syne] "
             to="/"
           >
             Nikeeyyy
@@ -52,7 +54,7 @@ const Header = () => {
           transitionDelay: isopen ? "0s" : "0s",
         }}
       >
-        <div className="flex items-center gap-8 flex-col">
+        <div className="flex items-center gap-8 flex-col font-[syne]">
           <Link onClick={() => setIsOpen(false)} className="flex" to="/">
             <span
               style={{
@@ -62,7 +64,7 @@ const Header = () => {
             >
               01
             </span>
-            <p className="socials_text text-9xl transition-all duration-1000 ease-in-out uppercase text-center text-grey-500 hover:line-through">
+            <p className="socials_text text-7xl transition-all duration-1000 ease-in-out uppercase text-center text-grey-500 hover:line-through">
               home
             </p>
           </Link>
@@ -75,7 +77,7 @@ const Header = () => {
             >
               02
             </span>
-            <p className="socials_text text-9xl uppercase text-grey-500 ease-in duration-2000 hover:line-through">
+            <p className="socials_text text-7xl uppercase text-grey-500 ease-in duration-2000 hover:line-through">
               Work
             </p>
           </Link>
@@ -88,12 +90,12 @@ const Header = () => {
             >
               03
             </span>
-            <p className="socials_text text-9xl uppercase text-grey-400 hover:line-through">
+            <p className="socials_text text-7xl uppercase text-grey-400 hover:line-through">
               Contact
             </p>
           </Link>
         </div>
-        <div className="socials flex gap-4 my-8 ">
+        <div className="socials flex gap-4 my-8 font-[syne] ">
           <a href="www.instagram.com">
             <span className="socials_text">Instagram</span>
           </a>
