@@ -33,7 +33,7 @@ function App() {
 
   return (
     <Router>
-      <div className="app pt-[70px]">
+      <div className="">
         <Header />
 
         <Routes>

@@ -20,11 +20,11 @@ const HomePage = () => {
   return (
     <motion.div
       initial={{
-        width: 0,
+        height: 0,
       }}
       animate={{
-        width: "100%",
-        transition: { delay: 0.3, ...transition },
+        height: "100%",
+        transition: { delay: 0.1, ...transition },
       }}
     >
       <HeroSection transition={transition} />

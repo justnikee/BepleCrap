@@ -16,6 +16,7 @@ const HeroSection = ({ transition }) => {
       opacity: 1,
       y: 0,
       duration: 2,
+      delay: 0.2,
     }).to(
       ".sub_text",
       {
@@ -23,8 +24,9 @@ const HeroSection = ({ transition }) => {
         opacity: 1,
         duration: 1,
         y: 0,
+        delay: 0.4,
       },
-      "-=1.5"
+      "-=0.5"
     );
   });
 
@@ -59,7 +61,7 @@ const HeroSection = ({ transition }) => {
               animate={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 0.3, ...transition },
+                transition: { delay: 2, ...transition },
               }}
               whileHover={{
                 boxShadow: "none",
@@ -81,7 +83,7 @@ const HeroSection = ({ transition }) => {
               animate={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 0.5, ...transition },
+                transition: { delay: 3, ...transition },
               }}
               className="h-full w-96"
               src={pp}

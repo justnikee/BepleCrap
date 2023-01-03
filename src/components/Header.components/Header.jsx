@@ -1,19 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isopen, setIsOpen] = useState(false);
+  const [stickyHead, setSticky] = useState();
+
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  }, []);
+
+  const isSticky = (e) => {
+    const scrollTop = window.scrollY;
+    const addSticky = scrollTop >= 70 ? "stickyHead" : "";
+    setSticky(addSticky);
+    console.log(addSticky);
+  };
+
+  const stickyClass = `${stickyHead}`;
 
   return (
     <div
-      className="header_container overflow-hidden fixed w-full top-0"
+      className={stickyClass}
       style={{
         background: "#ffffff",
         borderBottom: "3px solid #08081b",
         display: "flex",
         justifyContent: "center",
         height: "70px",
+        overflow: "hidden",
+        width: "100%",
+        transition: "1s ease all",
       }}
     >
       <div
