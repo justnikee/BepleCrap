@@ -5,6 +5,8 @@ import styled from "styled-components";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import HeroLinks from "../../HeroLinks";
+import Sidebar from "../../contactus.component/Sidebar";
 
 const HeroSection = ({ transition }) => {
   useEffect(() => {
@@ -32,27 +34,31 @@ const HeroSection = ({ transition }) => {
 
   return (
     <>
-      <div className="flex h-screen border-b-[3px] border-[#08081b]">
-        <div className="flex flex-col gap-10  border-[#08081b] bg-[#ffffff] justify-center items-start p-10 w-[60%]">
-          <Heading className="anime text-black text-6xl w-full font-[Syne] overflow-hidden">
-            <span className="anim_text font-[Syne] inline-block leading-[64px]">
-              Hii Im Nikhil,
+      <div className="flex h-screen w-screen border-b-[3px] border-[#08081b]">
+        <div className="w-[10%]">
+          <Sidebar />
+        </div>
+
+        <div className="flex flex-col gap-10 w-[40%] border-[#08081b] bg-[#ffffff] justify-center items-start p-10">
+          <Heading className="anime text-black font-[Syne] overflow-hidden">
+            <span className="anim_text text-3xl  uppercase font-[Montserrat] inline-block ">
+              Hi Im Nikhil,
             </span>
             <br />
-            <span className="anim_text font-[Syne] inline-block leading-[64px]">
+            <span className="anim_text text-3xl uppercase font-[Montserrat] inline-block ">
               And I Build
             </span>
             <br />
-            <span className="anim_text font-[Syne] inline-block leading-[64px]">
+            <span className="anim_text text-3xl uppercase font-[Montserrat] inline-block">
               Things For Web
             </span>
           </Heading>
-          <SubHeading className="text-2xl w-full font-[MuseoModerno] sub_text">
+          <SubHeading className="text-l w-[80%] font-[Montserrat] sub_text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
             possimus eius placeat veritatis explicabo ipsam debitis in nulla,
             est soluta!
           </SubHeading>
-          <Link to="/contact">
+          {/* <Link to="/contact">
             <motion.button
               initial={{
                 opacity: 0,
@@ -67,28 +73,15 @@ const HeroSection = ({ transition }) => {
                 boxShadow: "none",
                 ease: "linear",
               }}
-              className=" bg-[#ffc900] px-16 py-3 border-[3px] border-black rounded-xl border-r-black shadow uppercase font-bold "
+              className=" bg-[#ffc900] px-16 py-3 uppercase font-bold "
             >
               contact now
             </motion.button>
-          </Link>
+          </Link> */}
         </div>
         <div className="flex flex-col relative  bg-[#ffffff]  justify-center items-end w-[40%]">
           <div className="p-20">
-            <motion.img
-              initial={{
-                opacity: 0,
-                y: 200,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 3, ...transition },
-              }}
-              className="h-full w-96"
-              src={pp}
-              alt=""
-            />
+            <HeroLinks />
           </div>
         </div>
       </div>

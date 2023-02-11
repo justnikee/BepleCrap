@@ -5,6 +5,7 @@ import HeroSection from "./NewSections/HeroSection";
 import TechStack from "./NewSections/TechStack";
 import Portfolio from "./MyPortfolio/Portfolio";
 import "../../.././App.css";
+import Layout from "../layout";
 
 const transition = {
   duration: 1.4,
@@ -27,9 +28,10 @@ const HomePage = () => {
         transition: { delay: 0.1, ...transition },
       }}
     >
+      {/* <Layout /> */}
       <HeroSection transition={transition} />
-      <TechStack transition={transition} />
-      <Portfolio transition={transition} />
+      {/* <TechStack transition={transition} />
+      <Portfolio transition={transition} /> */}
     </motion.div>
   );
 };
