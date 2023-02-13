@@ -21,3 +21,7 @@ html {
     url("./Fonts/10\ Canopee/Canopee.otf") format("truetype");
   font-weight: bold;
 }
+
+.write-verticle {
+  writing-mode: vertical-lr;
+}

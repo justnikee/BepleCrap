@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import HeroSection from "./NewSections/HeroSection";
-import TechStack from "./NewSections/TechStack";
-import Portfolio from "./MyPortfolio/Portfolio";
-import "../../.././App.css";
-import Layout from "../layout";
+import HeroSection from "../components/Header.components/Homepage.components/NewSections/HeroSection";
 
 const transition = {
   duration: 1.4,
@@ -20,6 +16,7 @@ const Home = styled.div`
 const HomePage = () => {
   return (
     <motion.div
+      className="bg-[#1A1818]"
       initial={{
         height: 0,
       }}
