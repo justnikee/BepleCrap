@@ -54,26 +54,6 @@ const HeroSection = ({ transition }) => {
             possimus eius placeat veritatis explicabo ipsam debitis in nulla,
             est soluta!
           </SubHeading>
-          {/* <Link to="/contact">
-            <motion.button
-              initial={{
-                opacity: 0,
-                y: 100,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 2, ...transition },
-              }}
-              whileHover={{
-                boxShadow: "none",
-                ease: "linear",
-              }}
-              className=" bg-[#ffc900] px-16 py-3 uppercase font-bold "
-            >
-              contact now
-            </motion.button>
-          </Link> */}
         </div>
         <div className="flex flex-col relative  bg-[#1A1818]  justify-center items-end w-[50%]">
           <div className="p-20">
@@ -81,18 +61,9 @@ const HeroSection = ({ transition }) => {
           </div>
         </div>
       </div>
-      {/* <div className="h-screen w-screen bg-slate-600 flex justify-center items-center">
-        <h1>section 2</h1>
-      </div> */}
     </>
   );
 };
-
-// const Button = styled.button`
-//   /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-//   opacity: 0;
-//   transform: translateY(100px); */
-// `;
 
 const SubHeading = styled.p`
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
